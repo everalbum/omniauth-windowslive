@@ -44,6 +44,10 @@ module OmniAuth
         }
       end
 
+      def callback_url
+        full_host + script_name + callback_path
+      end
+
       # http://msdn.microsoft.com/en-us/library/hh243649.aspx
       def raw_info
         request = 'https://apis.live.net/v5.0/me'
